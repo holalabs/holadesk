@@ -1,0 +1,433 @@
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  height: 100%;
+  background: transparent;
+  font: 10pt 'PT Sans';
+  color: #333;
+  overflow: auto;
+  background: #EEE;
+  -webkit-overflow-scrolling: touch;
+}
+@font-face {
+  font-family: 'Evolution';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Evolution.ttf');
+}
+#logo {
+  position: absolute;
+  left: 50%;
+  width: 115px;
+  margin: 0;
+  margin-left: -57px;
+  text-transform: lowercase;
+  font-family: "Evolution";
+  font-size: 23pt;
+  line-height: 31px;
+  padding: 3px;
+  padding-bottom: 0px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+#logo span {
+  font: inherit;
+}
+#logo .red {
+  color: #C2131B;
+}
+#logo .green {
+  color: #409629;
+}
+header .left {
+  left: 34px !important;
+  right: auto;
+}
+.toolbarMenu {
+  top: 34px;
+  line-height: 34px;
+}
+#workspaceSelector {
+  top: 34px;
+  left: 68px;
+  width: 205px;
+  text-align: left;
+}
+#workspaceSelector > a {
+  text-align: center;
+  width: 205px;
+}
+#workspaceList li {
+  display: inline-block;
+  width: 185px;
+}
+#workspaceList > div button.edit {
+  position: absolute;
+  right: 0;
+}
+#workspaceList input {
+  width: 115px;
+  margin: 0;
+  margin-left: 10px;
+}
+section.notlogged {
+  display: none;
+  background: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -160px;
+  margin-top: -160px;
+  width: 320px;
+  height: 150px;
+  border: none;
+  text-align: center;
+  padding: 50px 0;
+}
+section.notlogged input {
+  width: 150px;
+  margin: auto;
+  margin-top: 10px;
+}
+#users {
+  display: none;
+  position: absolute;
+  width: 600px;
+  height: auto;
+  margin-left: -300px;
+  top: 65%;
+  left: 50%;
+  text-align: center;
+}
+#users div {
+  display: inline-block;
+  opacity: 0.6;
+  width: 80px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 10pt;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  margin-bottom: 20px;
+}
+#users div img {
+  text-align: center;
+}
+#users div:hover {
+  opacity: 1;
+}
+#icon,
+#icon2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  margin-top: -128px;
+  margin-left: -64px;
+  background-image: url(../desk/img/icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2000;
+}
+#icon {
+  background-image: url(../desk/img/icon.png);
+}
+#icon2 {
+  z-index: 4000;
+  display: none;
+  background-image: url(../desk/img/icon2.png);
+}
+#cover {
+  top: 34px;
+}
+#settings {
+  text-align: center;
+}
+#desk {
+  padding-top: 34px;
+}
+.column {
+  width: 325px;
+  float: left;
+  padding-bottom: 100px;
+  height: 100%;
+}
+#trash {
+  display: none;
+  width: 128px;
+  height: 128px;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: url(img/trash.png);
+  background-size: cover;
+  border: none;
+  opacity: 0.5;
+}
+#trash.ui-state-hover {
+  opacity: 1;
+}
+.app {
+  width: 320px;
+  margin: 10px;
+  background: #DDD;
+  display: block !important;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.app ::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  border-radius: 10px;
+  background: transparent;
+}
+.app-content {
+  position: relative;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 0px;
+}
+.app-header {
+  position: relative;
+  cursor: move;
+  padding-left: 0.2em;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.ui-sortable-placeholder {
+  width: 320px !important;
+  border: 1px dotted black;
+  background: transparent;
+  visibility: visible !important;
+}
+.ui-sortable-placeholder * {
+  visibility: hidden;
+}
+iframe {
+  width: 100%;
+}
+#apps {
+  width: 100%;
+}
+#appList {
+  text-align: left;
+}
+.appEntry {
+  width: 92px;
+  height: 128px;
+  margin: 10px;
+  text-align: center;
+  display: inline;
+  float: left;
+}
+.appEntry img {
+  width: 92px;
+  height: 92px;
+  text-align: center;
+}
+.appEntry:hover {
+  opacity: 0.7;
+  cursor: move;
+}
+#appView {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 10px 0;
+  margin-top: -240px;
+  margin-left: -322px;
+  width: 644px;
+  height: 480px;
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  background-clip: content-box;
+  -moz-background-clip: content;
+  -webkit-background-clip: content;
+  border: solid 1px #CCC;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  outline: 0;
+  background-color: #F1F1F1;
+  z-index: 2000;
+}
+#appView p {
+  padding: 25px 40px 0px 40px;
+}
+#appViewHeader {
+  padding: 25px 40px 0px 40px;
+  background-color: white;
+  position: relative;
+}
+#appViewHeader img {
+  display: inline-block;
+  vertical-align: top;
+  width: 92px;
+  height: 92px;
+  margin-right: 30px;
+}
+#appViewHeaderInfo {
+  display: inline-block;
+  height: 92px;
+  padding: 10px 0;
+}
+#appViewHeaderInfo h1 {
+  line-height: 64px;
+  margin: 0;
+  padding: 0;
+  line-height: 32px;
+  font-size: 32px;
+}
+#appViewHeaderInfo h5 {
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: normal;
+}
+#appViewButton {
+  position: absolute;
+  top: 30px;
+  right: 135px;
+}
+#appViewSocial {
+  position: absolute;
+  top: 30px;
+  right: 75px;
+}
+#appListToolbar {
+  height: 48px;
+  padding: 10px;
+  text-align: center;
+}
+#appListToolbar .left {
+  float: left;
+}
+#appListToolbar .left input {
+  margin-top: 5px !important;
+}
+#appListToolbar .right {
+  float: right;
+}
+#appListToolbar p.info {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4E4E4E;
+}
+.minSpin {
+  position: absolute;
+  left: 4px;
+  width: 32px;
+  height: 16px;
+  background-image: url(img/loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  margin-top: 4px;
+}
+.expand {
+  position: absolute;
+  right: 6px;
+  width: 16px;
+  height: 30px;
+  background-image: url(img/pictos/1/16/3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+#store {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.loading {
+  background-color: white;
+  background-image: url(framework/img/spinner.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.toolbarMenu {
+  position: fixed;
+  height: auto;
+  display: none;
+  background-color: #F1F1F1;
+  z-index: 10;
+}
+.close {
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  top: 7px;
+  right: 7px;
+  position: absolute;
+  z-index: 102;
+  opacity: 0.5;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAQAAAADHm0dAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAEgAAABIAEbJaz4AAAAJdnBBZwAAABUAAAAVAHF8yDUAAABtSURBVCjP5ZLBCcAwCEWfHSXDBEeSjJRZMkNXSQ9pS2wgpMdSPYj8h35EqazGtkx+FxUkCndG8WztEqWQTsEoqFNdA+mErdUZ2uB8TZ+jkCnk0d54ASOwE7BBeUy1zqvNDLy6gHYL1avy+yc8APGFa375gR00AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAABJRU5ErkJggg==);
+}
+.close:hover {
+  opacity: 1;
+}
+#cover {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: white;
+  opacity: 0.55;
+}
+.buttons {
+  height: 48px;
+  float: right;
+}
+#widgetViewSocial .dropdown-menu {
+  min-width: 125px !important;
+}
+.dropdown-menu i {
+  background-size: cover;
+  background-position: 0 !important;
+}
+.icon-facebook {
+  background-image: url(img/pictos/2/16/157.png) !important;
+}
+.icon-twitter {
+  background-image: url(img/pictos/2/16/156.png) !important;
+}
+.icon-google {
+  background-image: url(img/pictos/2/16/162.png) !important;
+}
+#about {
+  top: 50px;
+  left: 50px;
+  width: 90%;
+  height: 85%;
+  padding: 20px;
+  background: white;
+  z-index: 290;
+  border-radius: 20px;
+  border: 1px solid green;
+}
+#about header {
+  background-color: white;
+  position: relative;
+  width: 100%;
+}
+#about ul {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#about #closeabout {
+  color: green;
+  float: right;
+  font-size: 2em;
+}
+#about article {
+  overflow: auto;
+  height: 90%;
+}

@@ -1,0 +1,84 @@
+CACHE MANIFEST
+
+#version 1.5.8 06-03-2014
+
+CACHE:
+
+#images
+img/logo.png
+img/loading.gif
+img/icon.png
+img/icon2.png
+img/trash.png
+wallpapers/wood.jpg
+
+#style sheets
+store.css
+desk.css
+libs/jquery.meow.css
+
+#style sheet images
+img/pictos/1/24/137.png
+img/pictos/1/24/15.png
+img/pictos/1/24/288.png
+img/pictos/1/24/318.png
+img/pictos/1/24/44.png
+img/pictos/1/24/47.png
+img/pictos/1/24/58.png
+img/pictos/2/16/156.png
+img/pictos/2/16/157.png
+img/pictos/2/16/162.png
+img/pictos/1/24/276.png
+img/pictos/1/16/3.png  
+public/holadesk_favicon.png
+public/holadesk_logo.png
+
+#fonts
+fonts/Evolution.ttf
+fonts/PTSansBold.woff
+fonts/PTSansItalic.woff
+fonts/PTSansItalicBold.woff
+fonts/PTSans.woff
+
+#src files
+desk.js
+src/App.js
+src/Apps.js
+src/Native.js
+src/Network.js
+src/Security.js
+src/Storage.js
+src/Sync.js
+src/User.js
+src/Workspace.js
+
+#framework files
+framework/img/spinner.gif
+framework/fonts/PTSansBold.woff
+framework/fonts/PTSansItalic.woff
+framework/fonts/PTSansItalicBold.woff
+framework/fonts/PTSans.woff
+
+framework/holadeskui.css
+framework/holadeskui.js
+framework/holadesk.js
+
+#javascript lib files
+libs/aes.js
+libs/less.js
+libs/md5.js
+libs/jquery-1.7.1.min.js
+libs/jquery.meow.js
+libs/director-1.0.7.min.js
+libs/bootstrap-dropdown.js
+libs/jquery-ui-1.8.18.custom.min.js
+libs/jquery.ui.touch-punch.min.js
+
+NETWORK:
+*
+http://*
+https://*
+
+FALLBACK:
+
+/index.html fallback.html

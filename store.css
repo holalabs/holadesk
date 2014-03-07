@@ -1,0 +1,24 @@
+#wrapper {
+  width: 960px;
+}
+#wrapper > * {
+  width: 960px;
+  left: 50%;
+  margin-left: -480px;
+}
+header,
+footer {
+  padding: 0 10px;
+}
+header menu button,
+footer menu button {
+  margin: 0 10px;
+}
+#categoryList {
+  float: left;
+  width: 165px;
+}
+section header,
+section footer {
+  position: relative;
+}
